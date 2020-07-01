@@ -13,6 +13,7 @@ const FooterContainer = styled.div`
   height: 60px;
   box-shadow: 0 5px 10px 0 #CBCCCB;
   text-align: center;
+  border-top: 1px solid rgba(242,242,241,0.50);
 `
 const Email = styled.div`
     font-family: 'Graphik-Semibold';

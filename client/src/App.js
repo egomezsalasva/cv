@@ -10,6 +10,9 @@ import Navigation from './components/global/Navigation'
 // import data from './data/cv'
 
 //STYLE
+//-Variables
+const tagBottomMargin = "20px"
+const tagsExtraWidth = "10px"
 //-Components
 const CvButtonsContainer = styled.div`
   margin-top: 30px;
@@ -56,6 +59,10 @@ const SectionsOuter = styled.div`
       font-weight: 300;
       margin-bottom: 20px;
     }
+    h5{
+      font-family: 'Graphik-Semibold';
+      font-size: 12px;
+    }
     p{
       font-family: 'Graphik-Regular';
       font-size: 14px;
@@ -64,6 +71,30 @@ const SectionsOuter = styled.div`
       font-weight: 300;
       margin-bottom: 19px;
     }
+    .tagContainer{
+      position: relative;
+      left: -${tagsExtraWidth};
+      width: calc(100% + calc(${tagsExtraWidth} * 2));
+      display: flex;
+      margin: 20px 0 calc(30px - ${tagBottomMargin});
+      flex-wrap: wrap;
+      .tag{
+        height: 30px;
+        font-family: 'Graphik-Regular';
+        font-size: 11px;
+        text-align: center;
+        padding: 0 10px;
+        line-height: 30px;
+        margin: 0 10px ${tagBottomMargin};
+        background: #F8F9F8;
+        border: 1px solid rgba(242,242,241,0.50);
+        box-shadow: -5px -5px 10px 0 #FFFFFF, 5px 5px 10px 0 #F2F2F1;
+        border-radius: 5px;
+      }
+    }
+    .tagContainer:last-of-type{
+        margin-bottom: -20px;
+      }
   }
 `
 
@@ -128,6 +159,37 @@ function App() {
               <div className="tag">HTML 5</div>
               <div className="tag">CSS 3</div>
               <div className="tag">CSS Grid</div>
+              <div className="tag">SASS</div>
+              <div className="tag">JavaScrips ES6</div>
+              <div className="tag">Git</div>
+              <div className="tag">npm</div>
+              <div className="tag">Netlify</div>
+              <div className="tag">Strapi CMS</div>
+            </div>
+            <h5>Front-end Development</h5>
+            <div className="tagContainer">
+              <div className="tag">React.js</div>
+              <div className="tag">React Router</div>
+              <div className="tag">React Hooks</div>
+              <div className="tag">Styled Components</div>
+              <div className="tag">Fetch API</div>
+              <div className="tag">Axios</div>
+              <div className="tag">GeenSock Animation Platform (GSAP)</div>
+              <div className="tag">Svelte</div>
+            </div>
+            <h5>Back-end Development</h5>
+            <div className="tagContainer">
+              <div className="tag">Node.js</div>
+              <div className="tag">Express</div>
+              <div className="tag">MongoDB</div>
+              <div className="tag">Mongoose</div>
+              <div className="tag">mLab</div>
+              <div className="tag">Firebase</div>
+            </div>
+            <h5>Code Testing</h5>
+            <div className="tagContainer">
+              <div className="tag">Jest</div>
+              <div className="tag">Cypress</div>
             </div>
           </div>
           <div className="section">
