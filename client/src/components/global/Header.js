@@ -32,8 +32,8 @@ const ThemeBox = styled.div`
     height: 10px;
     background: black;
     margin: 3px;
-    right: 0;
-    left: auto;
+    right: auto;
+    left: 0;
   }
 `
 
