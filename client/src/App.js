@@ -5,26 +5,12 @@ import styled from 'styled-components'
 //-Components
 import Header from './components/global/Header'
 import Footer from './components/global/Footer'
+import Navigation from './components/global/Navigation'
 //-Data
 // import data from './data/cv'
 
 //STYLE
 //-Components
-const NavContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin: 30px auto;
-  padding: 0 70px;
-  font-family: 'SpaceMono-Regular';
-  font-size: 14px;
-  color: #000;
-  text-align: center;
-  text-transform: lowercase;
-  .activeNav{
-    font-weight: 700;
-  }
-`
 const CvButtonsContainer = styled.div`
   margin-top: 30px;
   text-align: center;
@@ -88,11 +74,7 @@ function App() {
     <>
       <Header/>
 
-      <NavContainer>
-        <div className="activeNav">C.V.</div>
-        <div>Portfolio</div>
-        <div>Library</div>
-      </NavContainer>
+      <Navigation/>
 
       <CvButtonsContainer>
         <div className="summaryButton">Don’t Make Me Read All This Bollocks</div>
@@ -168,6 +150,7 @@ function App() {
       </SectionsOuter>
 
       <Footer/>
+
     </>
   )
 }

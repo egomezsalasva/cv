@@ -1,7 +1,5 @@
 //IMPORTS
 //-Modules
-//IMPORTS
-//-Modules
 import React from 'react'
 import styled from 'styled-components'
 
@@ -23,7 +21,6 @@ const Email = styled.div`
     line-height: 60px;
     font-weight: 600;
 `
-
 
 
 //MAIN COMPONENT

@@ -41,16 +41,14 @@ const ThemeBox = styled.div`
 //MAIN COMPONENT
 function Header() {
   return (
-    <>
-      <HeaderContainer>
-        <Title>J. Enrique Gomez-Salas</Title>
-        <div>
-          <ThemeBox>
-            <div className="cube"/>
-          </ThemeBox>
-        </div>
-      </HeaderContainer>      
-    </>
+    <HeaderContainer>
+      <Title>J. Enrique Gomez-Salas</Title>
+      <div>
+        <ThemeBox>
+          <div className="cube"/>
+        </ThemeBox>
+      </div>
+    </HeaderContainer>      
   )
 }
 export default Header;
