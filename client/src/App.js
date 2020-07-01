@@ -47,6 +47,8 @@ const SectionsOuter = styled.div`
   overflow: scroll;
   .section{
     margin: 0 30px 50px;
+    max-width: 650px;
+
     h4{
       display: inline-block;
       background: black;
@@ -71,6 +73,7 @@ const SectionsOuter = styled.div`
       font-weight: 300;
       margin-bottom: 19px;
     }
+
     .tagContainer{
       position: relative;
       left: -${tagsExtraWidth};
@@ -95,7 +98,18 @@ const SectionsOuter = styled.div`
     .tagContainer:last-of-type{
         margin-bottom: -20px;
       }
-  }
+    }
+
+    table{
+      width: 100%;
+    }
+    td{
+      font-size: 14px;
+      padding-bottom: 20px;
+    }
+    .lastTd{
+      padding-bottom: 0;
+    }
 `
 
 
@@ -194,7 +208,38 @@ function App() {
           </div>
           <div className="section">
             <h4>Interests</h4>
-            <p></p>
+            <table>
+              <tbody>
+                <tr>
+                  <td>•&nbsp;Cryptography</td>
+                  <td>•&nbsp;Behavioural Science</td>
+                </tr>
+                <tr>
+                  <td>•&nbsp;Neuroscience</td>
+                  <td>•&nbsp;New Technologies</td>
+                </tr>
+                <tr>
+                  <td>•&nbsp;Music Composition</td>
+                  <td>•&nbsp;Business</td>
+                </tr>
+                <tr>
+                  <td>•&nbsp;Economy</td>
+                  <td>•&nbsp;Zen Meditation</td>
+                </tr>
+                <tr>
+                  <td>•&nbsp;Nutrition</td>
+                  <td>•&nbsp;Screen Printing</td>
+                </tr>
+                <tr>
+                  <td>•&nbsp;Reading</td>
+                  <td>•&nbsp;User Experience</td>
+                </tr>
+                <tr>
+                  <td className="lastTd">•&nbsp;3D & AR/VR</td>
+                  <td className="lastTd">•&nbsp;Blockchain</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <div className="section">
             <h4>Languages</h4>
