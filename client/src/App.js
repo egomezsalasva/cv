@@ -4,6 +4,7 @@ import React from 'react'
 import styled from 'styled-components'
 //-Components
 import Header from './components/global/Header'
+import Footer from './components/global/Footer'
 //-Data
 // import data from './data/cv'
 
@@ -24,18 +25,30 @@ const NavContainer = styled.div`
     font-weight: 700;
   }
 `
-const SummaryButtonContainer = styled.div`
+const CvButtonsContainer = styled.div`
   margin-top: 30px;
   text-align: center;
   .summaryButton{
     display: inline-block;
-    padding: 14px 20px 10px;
+    padding: 13px 20px 10px;
     border: 1px solid #000;
     font-family: 'Graphik-Regular';
-    font-size: 14px;
-    color: #000;
+    font-size: 12px;
     text-align: center;
     cursor: pointer;
+  }
+  .textResizeButton{
+    display: inline-block;
+    padding: 13px 17px 10px;
+    border: 1px solid #000;
+    font-family: 'Graphik-Regular';
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .increaseSizeButton{
+    margin-left: 10px;
+    border-right: 0px solid transparent;
   }
 `
 const SectionsOuter = styled.div`
@@ -67,9 +80,7 @@ const SectionsOuter = styled.div`
     }
   }
 `
-const Footer = styled.div`
-  
-`
+
 
 function App() {
 
@@ -83,9 +94,11 @@ function App() {
         <div>Library</div>
       </NavContainer>
 
-      <SummaryButtonContainer>
+      <CvButtonsContainer>
         <div className="summaryButton">Don’t Make Me Read All This Bollocks</div>
-      </SummaryButtonContainer>
+        <div className="textResizeButton increaseSizeButton">+</div>
+        <div className="textResizeButton decreseSizeButton">-</div>
+      </CvButtonsContainer>
       
       <SectionsOuter>
         <div className="sectionsInner">
@@ -123,7 +136,17 @@ function App() {
           </div>
           <div className="section">
             <h4>Skills</h4>
-            <p></p>
+            <h5>Design</h5>
+            <div className="tagContainer">
+              <div className="tag">Sketch App</div>
+              <div className="tag">Corportate Design</div>
+            </div>
+            <h5>Core Coding & Tools</h5>
+            <div className="tagContainer">
+              <div className="tag">HTML 5</div>
+              <div className="tag">CSS 3</div>
+              <div className="tag">CSS Grid</div>
+            </div>
           </div>
           <div className="section">
             <h4>Interests</h4>
@@ -144,9 +167,7 @@ function App() {
         </div>
       </SectionsOuter>
 
-      <Footer>
-
-      </Footer>
+      <Footer/>
     </>
   )
 }
