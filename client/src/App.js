@@ -9,6 +9,8 @@ import Header from './components/global/Header'
 import Footer from './components/global/Footer'
 import Navigation from './components/global/Navigation'
 import Cv from './components/cv/Cv'
+import Portfolio from './components/portfolio/Portfolio'
+import Library from './components/library/Library'
 //-Data
 // import data from './data/cv'
 
