@@ -45,6 +45,10 @@ const SectionsOuter = styled.div`
     margin: 0 30px 50px;
     max-width: 650px;
 
+    .storyText{
+      /* display: none; */
+    }
+
     h4{
       display: inline-block;
       background: black;
@@ -73,6 +77,9 @@ const SectionsOuter = styled.div`
       display: block;
       color: black;
       font-size: 14px
+    }
+    ul{
+      background: red;
     }
 
     .tagContainer{
@@ -128,15 +135,24 @@ function Cv() {
         <div className="sectionsInner">
           <div className="section">
             <h4>Me</h4>
-            <p>As a generalist, if you want to call it like that, I have hustled my way through life learning a few things on the way. I also like doing things my way like Frank Sinatra.</p>
+            <div className="storyText">
+             <p>As a generalist, if you want to call it like that, I have hustled my way through life learning a few things on the way. I also like doing things my way like Frank Sinatra.</p>
+            </div>
+            <div className="summaryText">
+              <ul>
+                <li></li>
+              </ul>
+            </div>
           </div>
           <div className="section">
             <h4>What I’m Looking For</h4>
-            <p>I’m preferibly looking for a business on it’s early stages, where there is shared responsability and tasks in different fields.</p>
-            <p>I really value purpose-driven companies. These are companies who’s main goal is not monetary but solving an important issue in society.</p>
-            <p>I also value autonomy. I like when companies let their employees take their own decisions and let them manage themselves.</p>
-            <p>I also value mastery. I like when companies let their employees progress in their skills and think of long-term progression instead of short-term goals.</p>
-            <p>As an extra, I find the ’20% time’, where employees are given part of their time for sideprojects an interesting concept.</p>
+            <div className="storyText">
+              <p>I’m preferibly looking for a business on it’s early stages, where there is shared responsability and tasks in different fields.</p>
+              <p>I really value purpose-driven companies. These are companies who’s main goal is not monetary but solving an important issue in society.</p>
+              <p>I also value autonomy. I like when companies let their employees take their own decisions and let them manage themselves.</p>
+              <p>I also value mastery. I like when companies let their employees progress in their skills and think of long-term progression instead of short-term goals.</p>
+              <p>As an extra, I find the ’20% time’, where employees are given part of their time for sideprojects an interesting concept.</p>
+            </div>
           </div>
           <div className="section">
             <h4>Education</h4>
@@ -240,12 +256,12 @@ function Cv() {
           </div>
           <div className="section">
             <h4>Languages</h4>
-            <p>- Spanish: First Language</p>
-            <p>- English: Second Language</p>
+            <p>• Spanish: First Language</p>
+            <p>• English: Second Language</p>
           </div>
           <div className="section">
             <h4>Links</h4>
-            <a href="https://github.com/egomezsalasva" target="_blank">https://github.com/egomezsalasva</a>
+            <a href="https://github.com/egomezsalasva" target="_blank" rel="noopener noreferrer">https://github.com/egomezsalasva</a>
           </div>
           <div className="section">
             <h4>Lets Meet</h4>
