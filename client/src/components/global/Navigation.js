@@ -31,7 +31,7 @@ const NavOption = styled(NavLink)`
 function Navigation() {
   return (
     <NavContainer>
-        <NavOption to="/" activeClassName="activeNav">C.V.</NavOption>
+        <NavOption to="/" exact activeClassName="activeNav">C.V.</NavOption>
         <NavOption to="/portfolio" activeClassName="activeNav">Portfolio</NavOption>
         <NavOption to="/library" activeClassName="activeNav">Library</NavOption>
     </NavContainer>

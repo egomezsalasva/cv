@@ -1,6 +1,6 @@
 //IMPORTS
 //-Modules
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 
@@ -9,6 +9,7 @@ import styled from 'styled-components'
 //-Variables
 const tagBottomMargin = "20px"
 const tagsExtraWidth = "10px"
+const ulTranslate = "15px"
 //-Components
 const CvButtonsContainer = styled.div`
   margin-top: 30px;
@@ -46,7 +47,10 @@ const SectionsOuter = styled.div`
     max-width: 650px;
 
     .storyText{
-      /* display: none; */
+      display: block;
+    }
+    .summaryText{
+      display: none;
     }
 
     h4{
@@ -79,9 +83,23 @@ const SectionsOuter = styled.div`
       font-size: 14px
     }
     ul{
-      background: red;
+      transform:translateX(${ulTranslate});
+      width: calc(100% - ${ulTranslate});
+      li{
+        font-size: 14px;
+        margin-bottom: 14px;
+      }
+      ul{
+        margin-top: 14px;
+        margin-bottom: 30px;
+        list-style-type: disc;
+        li{
+          font-size: 12px;
+          margin-bottom: 0;
+          line-height: 20px;
+        }
+      }
     }
-
     .tagContainer{
       position: relative;
       left: -${tagsExtraWidth};
@@ -123,10 +141,32 @@ const SectionsOuter = styled.div`
 
 //MAIN COMPONENT
 function Cv() {
+
+  //Toggle Summary Button
+  const [toggleSummaryButton, setToggleSummaryButton] = useState("OFF")
+  const handleToggleSummaryButton = () => {
+
+    if(toggleSummaryButton === "OFF"){
+
+      document.querySelector(".summaryButton").innerHTML = "Tell Me Your Story"
+      document.querySelectorAll(".storyText").forEach(e => { e.style.display = "none" })
+      document.querySelectorAll(".summaryText").forEach(e => { e.style.display = "block" })
+      setToggleSummaryButton("ON")
+
+    } else if (toggleSummaryButton === "ON") {
+
+      document.querySelector(".summaryButton").innerHTML = "Don’t Make Me Read All This Bollocks"
+      document.querySelectorAll(".storyText").forEach(e => { e.style.display = "block" })
+      document.querySelectorAll(".summaryText").forEach(e => { e.style.display = "none" })
+      setToggleSummaryButton("OFF")
+    }
+
+  }
+
   return (
     <>
       <CvButtonsContainer>
-        <div className="summaryButton">Don’t Make Me Read All This Bollocks</div>
+        <div className="summaryButton" onClick={handleToggleSummaryButton}>Don’t Make Me Read All This Bollocks</div>
         <div className="textResizeButton increaseSizeButton">+</div>
         <div className="textResizeButton decreseSizeButton">-</div>
       </CvButtonsContainer>
@@ -140,7 +180,8 @@ function Cv() {
             </div>
             <div className="summaryText">
               <ul>
-                <li></li>
+                <li>Generalist</li>
+                <li>Perfectionist</li>
               </ul>
             </div>
           </div>
@@ -153,26 +194,94 @@ function Cv() {
               <p>I also value mastery. I like when companies let their employees progress in their skills and think of long-term progression instead of short-term goals.</p>
               <p>As an extra, I find the ’20% time’, where employees are given part of their time for sideprojects an interesting concept.</p>
             </div>
+            <div className="summaryText">
+              <ul>
+                <li>Early stage company</li>
+                <li>Purpose-driven company</li>
+                <li>Employee autonomy</li>
+                <li>Long-term progression (Mastery)</li>
+              </ul>
+            </div>
           </div>
           <div className="section">
             <h4>Education</h4>
-            <p>It all started at an English school in Mallorca where I  had to go everyday from kindergarden until I got kicked out right before my A levels.</p>
-            <p>After this, I went to a Spanish school to do the E.S.O. and bachillerato.</p>
-            <p>Then I went to London to do a year of A levels in Ealing Independent College but had to come back to Spain due to economic reasons.</p>
-            <p>Back in Spain I attended Elisava to do Graphic Design.</p>
+            <div className="storyText">
+              <p>It all started at an English school in Mallorca where I  had to go everyday from kindergarden until I got kicked out right before my A levels.</p>
+              <p>After this, I went to a Spanish school to do the E.S.O. and bachillerato.</p>
+              <p>Then I went to London to do a year of A levels in Ealing Independent College but had to come back to Spain due to economic reasons.</p>
+              <p>Back in Spain I attended Elisava to do Graphic Design.</p>
+            </div>
+            <div className="summaryText">
+              <ul>
+                <li>Queen’s College, Mallorca (GCSE’s)</li>
+                <li>IES Bendinat, Mallorca (Bachillerato)</li>
+                <li>Ealing Independent Collage, London (A levels)</li>
+                <li>Elisava, Barcelona (Graphic Design)</li>
+              </ul>
+            </div>
           </div>
           <div className="section">
             <h4>Post-Education</h4>
-            <p>Once I left Elisava I deciced I was interested in business. So I decided to start making clothing as it was an affordable business to start, and made me enough money to live.</p>
-            <p>For the clothing idea I needed a website so I decided to learn how to make websites with an Adobe program called Muse. Which is a very flexible drag and drop software.</p>
-            <p>Then I realized I could earn some money making websites for other people, so I moved back to Mallorca and started Gryd-Design.</p>
-            <p>With Gryd-Design I made some flyers and went around door-to-door sales. Once I got a few projects running (Carpenters, Real Estate, Film Director, Hedge Fund, Artist, Fruit Shop) I managed to save enough to hire a fried to do the sales side so I could focus on website creation. I then hired an off-shore virtual assistant to investigate what businesses didn’t have websites so we could be more efficient on the sales side.</p>
-            <p>On the way I saw a lot of inspiration on websites like awwwards and cssdesignawards and saw limitations on with Adobe Muse. So I started learning coding on 2014 roughly. I learnt HTML, CSS and JavaScript.</p>
-            <p>During this time I bought a fucking expensive screen-printing machine so I could offer that as an extra service to my customers at Gryd. It also allowed me to retake the clothing line I wanted to initially create.</p>
-            <p>I saw myself being involved in projects I didn’t particularly relate to on Gryd-Design and got offered a job for Estiber in Barcelona.</p>
-            <p>So I moved back to Barcelona. I thought it was a good ideas as it started to become somewhat of a tech-hub at the time.</p>
-            <p>I worked for Estiber for a year as a Lead Designer and was also involved in some of the Marketing (hand-coding Mailchimp emails). After the year we decided our values didn’t match so we stopped working together.</p>
-            <p>I went back into selling clothes while I learnt new technologies like React and Node and its correspondant modules and libraries. I came to work on a coffee shop on personal projects too and got a few odd jobs here and there making webistes. I ended up catching the attention of the founder of Apollo30 in a cafe and we got on well together so he offered me to work with them and I have been working there ever since as a freelancer.</p>
+            <div className="storyText">
+              <p>Once I left Elisava I deciced I was interested in business. So I decided to start making clothing as it was an affordable business to start, and made me enough money to live.</p>
+              <p>For the clothing idea I needed a website so I decided to learn how to make websites with an Adobe program called Muse. Which is a very flexible drag and drop software.</p>
+              <p>Then I realized I could earn some money making websites for other people, so I moved back to Mallorca and started Gryd-Design.</p>
+              <p>With Gryd-Design I made some flyers and went around door-to-door sales. Once I got a few projects running (Carpenters, Real Estate, Film Director, Hedge Fund, Artist, Fruit Shop) I managed to save enough to hire a fried to do the sales side so I could focus on website creation. I then hired an off-shore virtual assistant to investigate what businesses didn’t have websites so we could be more efficient on the sales side.</p>
+              <p>On the way I saw a lot of inspiration on websites like awwwards and cssdesignawards and saw limitations on with Adobe Muse. So I started learning coding on 2014 roughly. I learnt HTML, CSS and JavaScript.</p>
+              <p>During this time I bought a fucking expensive screen-printing machine so I could offer that as an extra service to my customers at Gryd. It also allowed me to retake the clothing line I wanted to initially create.</p>
+              <p>I saw myself being involved in projects I didn’t particularly relate to on Gryd-Design and got offered a job for Estiber in Barcelona.</p>
+              <p>So I moved back to Barcelona. I thought it was a good ideas as it started to become somewhat of a tech-hub at the time.</p>
+              <p>I worked for Estiber for a year as a Lead Designer and was also involved in some of the Marketing (hand-coding Mailchimp emails). After the year we decided our values didn’t match so we stopped working together.</p>
+              <p>I went back into selling clothes while I learnt new technologies like React and Node and its correspondant modules and libraries. I came to work on a coffee shop on personal projects too and got a few odd jobs here and there making webistes. I ended up catching the attention of the founder of Apollo30 in a cafe and we got on well together so he offered me to work with them and I have been working there ever since as a freelancer.</p>
+            </div>
+            <div className="summaryText">
+              <ul>
+                <li>Clothing Freelance, Barcelona
+                  <ul>
+                    <li>Sales</li>
+                  </ul>
+                </li>
+                <li>Gryd-Design, Mallorca
+                  <ul>
+                    <li>Design</li>
+                    <li>Web Development</li>
+                    <li>Sales</li>
+                    <li>Management</li>
+                    <li>Screen-printing</li>
+                  </ul>
+                </li>
+                <li>Viatges Estiber, Barcelona
+                  <ul>
+                    <li>Lead Design</li>
+                    <li>Marketing</li>
+                  </ul>
+                </li>
+                <li>Clothing Freelance, Barcelona
+                  <ul>
+                    <li>Sales</li>
+                  </ul>
+                </li>
+                <li>Websites Freelance, Barcleona
+                  <ul>
+                    <li>Design</li>
+                    <li>Web Development</li>
+                  </ul>
+                </li>
+                <li>Apollo30, Barcleona
+                  <ul>
+                    <li>Design</li>
+                    <li>Web Development</li>
+                  </ul>
+                </li>
+                <li>Scranny's House, Barcelona
+                  <ul>
+                    <li>Sales</li>
+                    <li>Design</li>
+                    <li>Web Development</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
           <div className="section">
             <h4>Skills</h4>
