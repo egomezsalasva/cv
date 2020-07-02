@@ -69,6 +69,11 @@ const SectionsOuter = styled.div`
       font-weight: 300;
       margin-bottom: 19px;
     }
+    a{
+      display: block;
+      color: black;
+      font-size: 14px
+    }
 
     .tagContainer{
       position: relative;
@@ -107,7 +112,6 @@ const SectionsOuter = styled.div`
       padding-bottom: 0;
     }
 `
-
 
 
 //MAIN COMPONENT
@@ -236,11 +240,12 @@ function Cv() {
           </div>
           <div className="section">
             <h4>Languages</h4>
-            <p></p>
+            <p>- Spanish: First Language</p>
+            <p>- English: Second Language</p>
           </div>
           <div className="section">
             <h4>Links</h4>
-            <p></p>
+            <a href="https://github.com/egomezsalasva" target="_blank">https://github.com/egomezsalasva</a>
           </div>
           <div className="section">
             <h4>Lets Meet</h4>

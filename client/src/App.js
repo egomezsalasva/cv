@@ -15,7 +15,7 @@ import Cv from './components/cv/Cv'
 //-Components
 
 
-
+//MAIN COMPONENT
 function App() {
 
   return (
@@ -31,5 +31,4 @@ function App() {
     </>
   )
 }
-
 export default App;
