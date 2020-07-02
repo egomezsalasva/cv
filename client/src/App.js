@@ -1,7 +1,9 @@
 //IMPORTS
 //-Modules
 import React from 'react'
-import styled from 'styled-components'
+// import styled from 'styled-components'
+import { Switch, Route } from "react-router-dom";
+
 //-Components
 import Header from './components/global/Header'
 import Footer from './components/global/Footer'
@@ -24,7 +26,17 @@ function App() {
       <Header/>
       <Navigation/>
 
-      <Cv/>
+      <Switch>
+        <Route exact path="/">
+          <Cv/>
+        </Route>
+        <Route path="/portfolio">
+          <Portfolio />
+        </Route>
+        <Route path="/librar">
+          <Library />
+        </Route>
+      </Switch>
 
       <Footer/>
 
