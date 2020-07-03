@@ -82,6 +82,13 @@ const SectionsOuter = styled.div`
       color: black;
       font-size: 14px
     }
+    .interestList{      
+      li{
+        list-style-type: disc;
+        display: inline-block;
+        width: 49%;
+      }
+    }
     ul{
       transform:translateX(${ulTranslate});
       width: calc(100% - ${ulTranslate});
@@ -407,43 +414,27 @@ function Cv() {
           </div>
           <div className="section">
             <h4>Interests</h4>
-            <table>
-              <tbody>
-                <tr>
-                  <td>•&nbsp;Cryptography</td>
-                  <td>•&nbsp;Behavioural Science</td>
-                </tr>
-                <tr>
-                  <td>•&nbsp;Neuroscience</td>
-                  <td>•&nbsp;New Technologies</td>
-                </tr>
-                <tr>
-                  <td>•&nbsp;Music Composition</td>
-                  <td>•&nbsp;Business</td>
-                </tr>
-                <tr>
-                  <td>•&nbsp;Economy</td>
-                  <td>•&nbsp;Zen Meditation</td>
-                </tr>
-                <tr>
-                  <td>•&nbsp;Nutrition</td>
-                  <td>•&nbsp;Screen Printing</td>
-                </tr>
-                <tr>
-                  <td>•&nbsp;Reading</td>
-                  <td>•&nbsp;User Experience</td>
-                </tr>
-                <tr>
-                  <td className="lastTd">•&nbsp;3D & AR/VR</td>
-                  <td className="lastTd">•&nbsp;Blockchain</td>
-                </tr>
-              </tbody>
-            </table>
+            <ul className="interestList">
+              <li>Cryptography</li>
+              <li>Behavioural Science</li>
+              <li>Neuroscience</li>
+              <li>New Technologies</li>
+              <li>Music Composition</li>
+              <li>Business</li>
+              <li>Economy</li>
+              <li>Nutrition</li>
+              <li>Reading</li>
+              <li>User Experience</li>
+              <li>3D & AR/VR</li>
+              <li>Blockchain</li>
+            </ul>
           </div>
           <div className="section">
             <h4>Languages</h4>
-            <p>• Spanish: First Language</p>
-            <p>• English: Second Language</p>
+            <ul>
+              <li>Spanish: First Language</li>
+              <li>English: Second Language</li>
+            </ul>
           </div>
           <div className="section">
             <h4>Links</h4>
