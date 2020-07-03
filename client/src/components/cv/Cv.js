@@ -163,12 +163,48 @@ function Cv() {
 
   }
 
+
+  //Font Sizing
+  const numberOfTimesButtonCanBeClicked = 4
+  const numberOfPixelsToChange = 2
+  const [headingFontSize, setHeadingFontSize] = useState(14)
+  const [headingLineHeight, setHeadingLineHeight] = useState(21)
+  //Increment Font Size Button
+  const handleIncrementFontSize = () => {
+    const sectionHeadingFont = document.querySelectorAll(".section h4")
+    setHeadingFontSize(headingFontSize + numberOfPixelsToChange)
+    setHeadingLineHeight(headingLineHeight + numberOfPixelsToChange)
+    if( headingFontSize === ((numberOfPixelsToChange * numberOfTimesButtonCanBeClicked) + 14) ){
+      setHeadingFontSize(((numberOfPixelsToChange * numberOfTimesButtonCanBeClicked) + 14))
+    }
+    if(headingLineHeight === ((numberOfPixelsToChange * numberOfTimesButtonCanBeClicked) + 21)){
+      setHeadingLineHeight(((numberOfPixelsToChange * numberOfTimesButtonCanBeClicked) + 21))
+    }
+    sectionHeadingFont.forEach(e => { e.style.fontSize = `${headingFontSize}px` })
+    sectionHeadingFont.forEach(e => { e.style.lineHeight = `${headingLineHeight}px` })
+  }
+  //Decrement Font Size Button
+  const handleDecrementFontSize = () => {
+    const sectionHeadingFont = document.querySelectorAll(".section h4")
+    setHeadingFontSize(headingFontSize - numberOfPixelsToChange)
+    setHeadingLineHeight(headingLineHeight - numberOfPixelsToChange)
+    if( headingFontSize === (14) ){
+      setHeadingFontSize(14)
+    }
+    if(headingLineHeight === (21)){
+      setHeadingLineHeight(21)
+    }
+    sectionHeadingFont.forEach(e => { e.style.fontSize = `${headingFontSize}px` })
+    sectionHeadingFont.forEach(e => { e.style.lineHeight = `${headingLineHeight}px` })
+  }
+
+
   return (
     <>
       <CvButtonsContainer>
         <div className="summaryButton" onClick={handleToggleSummaryButton}>Don’t Make Me Read All This Bollocks</div>
-        <div className="textResizeButton increaseSizeButton">+</div>
-        <div className="textResizeButton decreseSizeButton">-</div>
+        <div className="textResizeButton increaseSizeButton" onClick={handleIncrementFontSize}>+</div>
+        <div className="textResizeButton decreseSizeButton" onClick={handleDecrementFontSize}>-</div>
       </CvButtonsContainer>
       
       <SectionsOuter>
