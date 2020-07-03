@@ -167,11 +167,15 @@ function Cv() {
   //Font Sizing
   const numberOfTimesButtonCanBeClicked = 4
   const numberOfPixelsToChange = 2
+  const sectionHeadingFont = document.querySelectorAll(".section h4")
   const [headingFontSize, setHeadingFontSize] = useState(14)
   const [headingLineHeight, setHeadingLineHeight] = useState(21)
+  const sectionParagraphFont = document.querySelectorAll(".section p")
+  const [paragraphFontSize, setParagraphFontSize] = useState(14)
+  const [paragraphLineHeight, setParagraphLineHeight] = useState(19)
   //Increment Font Size Button
   const handleIncrementFontSize = () => {
-    const sectionHeadingFont = document.querySelectorAll(".section h4")
+    //Increment H4
     setHeadingFontSize(headingFontSize + numberOfPixelsToChange)
     setHeadingLineHeight(headingLineHeight + numberOfPixelsToChange)
     if( headingFontSize === ((numberOfPixelsToChange * numberOfTimesButtonCanBeClicked) + 14) ){
@@ -182,20 +186,42 @@ function Cv() {
     }
     sectionHeadingFont.forEach(e => { e.style.fontSize = `${headingFontSize}px` })
     sectionHeadingFont.forEach(e => { e.style.lineHeight = `${headingLineHeight}px` })
+    //Increment p
+    setParagraphFontSize(paragraphFontSize + numberOfPixelsToChange)
+    setParagraphLineHeight(paragraphLineHeight + numberOfPixelsToChange)
+    if( paragraphFontSize === ((numberOfPixelsToChange * numberOfTimesButtonCanBeClicked) + 14) ){
+      setParagraphFontSize(((numberOfPixelsToChange * numberOfTimesButtonCanBeClicked) + 14))
+    }
+    if (paragraphLineHeight === ((numberOfPixelsToChange * numberOfTimesButtonCanBeClicked) + 19)){
+      setParagraphLineHeight(((numberOfPixelsToChange * numberOfTimesButtonCanBeClicked) + 19))
+    }
+    sectionParagraphFont.forEach(e => { e.style.fontSize = `${paragraphFontSize}px` })
+    sectionParagraphFont.forEach(e => { e.style.lineHeight = `${paragraphLineHeight}px` })
   }
   //Decrement Font Size Button
   const handleDecrementFontSize = () => {
-    const sectionHeadingFont = document.querySelectorAll(".section h4")
+    //Decrement H4
     setHeadingFontSize(headingFontSize - numberOfPixelsToChange)
     setHeadingLineHeight(headingLineHeight - numberOfPixelsToChange)
-    if( headingFontSize === (14) ){
+    if( headingFontSize === 14 ){
       setHeadingFontSize(14)
     }
-    if(headingLineHeight === (21)){
+    if( headingLineHeight === 21 ){
       setHeadingLineHeight(21)
     }
     sectionHeadingFont.forEach(e => { e.style.fontSize = `${headingFontSize}px` })
     sectionHeadingFont.forEach(e => { e.style.lineHeight = `${headingLineHeight}px` })
+    //Decrement p
+    setParagraphFontSize(paragraphFontSize - numberOfPixelsToChange)
+    setParagraphLineHeight(paragraphLineHeight - numberOfPixelsToChange)
+    if( paragraphFontSize === 14 ){
+      setParagraphFontSize(14)
+    }
+    if ( paragraphLineHeight === 19 ){
+      setParagraphLineHeight(19)
+    }
+    sectionParagraphFont.forEach(e => { e.style.fontSize = `${paragraphFontSize}px` })
+    sectionParagraphFont.forEach(e => { e.style.lineHeight = `${paragraphLineHeight}px` })
   }
 
 
