@@ -53,8 +53,12 @@ const SectionsOuter = styled.div`
     .summaryText{
       display: none;
     }
-
+    .titleBox{
+      width: 0;
+      background: black;
+    }
     h4{
+      opacity: 0;
       display: inline-block;
       background: black;
       color: white;
@@ -150,10 +154,7 @@ const SectionsOuter = styled.div`
 //MAIN COMPONENT
 function Cv() {
 
-  //Smoothe Scrolling
-    // const scroll = new LocomotiveScroll()
-    // const scrollContainer = document.querySelector('.sectionsInner')
-    // scroll.scrollTo(scrollContainer)
+  //Smooth Scrolling
 
   //Toggle Summary Button
     const [toggleSummaryButton, setToggleSummaryButton] = useState("OFF")
@@ -293,6 +294,8 @@ function Cv() {
         sectionListItemInnerFont.forEach(e => { e.style.lineHeight = `${listItemInnerLineHeightSize}px` })
     }
 
+    
+
   //
   return (
     <>
@@ -305,7 +308,9 @@ function Cv() {
       <SectionsOuter>
         <div className="sectionsInner">
           <div className="section">
-            <h4>Me</h4>
+            <div className="titleBox">
+              <h4>Me</h4>
+            </div>
             <div className="storyText">
              <p>I consider myself to be a generalist, as I find interest in a wide range of subjects. I find this helps me have a different perspective in a certain field.</p>
              <p>For better or for worse, I am somewhat of a perfectionist. It helps me do detailed work but it also slows down some projects.</p>
