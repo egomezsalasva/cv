@@ -2,6 +2,7 @@
 //-Modules
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import LocomotiveScroll from 'locomotive-scroll';
 
 
 
@@ -148,6 +149,12 @@ const SectionsOuter = styled.div`
 
 //MAIN COMPONENT
 function Cv() {
+
+  //Smoothe Scrolling
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector('.sectionsInner'),
+      smooth: true
+  })
 
   //Toggle Summary Button
     const [toggleSummaryButton, setToggleSummaryButton] = useState("OFF")
