@@ -2,7 +2,7 @@
 //-Modules
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import LocomotiveScroll from 'locomotive-scroll';
+// import LocomotiveScroll from 'locomotive-scroll'
 
 
 
@@ -151,10 +151,9 @@ const SectionsOuter = styled.div`
 function Cv() {
 
   //Smoothe Scrolling
-    const scroll = new LocomotiveScroll({
-      el: document.querySelector('.sectionsInner'),
-      smooth: true
-  })
+    // const scroll = new LocomotiveScroll()
+    // const scrollContainer = document.querySelector('.sectionsInner')
+    // scroll.scrollTo(scrollContainer)
 
   //Toggle Summary Button
     const [toggleSummaryButton, setToggleSummaryButton] = useState("OFF")
@@ -188,6 +187,12 @@ function Cv() {
     const [paragraphLineHeight, setParagraphLineHeight] = useState(19)
     const sectionSubheadingFont = document.querySelectorAll(".section h5")
     const [subheadingFontSize, setSubheadingFontSize] = useState(12)
+    const sectionListItemFont = document.querySelectorAll(".section li")
+    const [listItemFontSize, setListItemFontSize] = useState(14)
+    const sectionListItemInnerFont = document.querySelectorAll(".section li li")
+    const [listItemInnerFontSize, setListItemInnerFontSize] = useState(12)
+    const [listItemInnerLineHeightSize, setListItemInnerLineHeightSize] = useState(20)
+
     //Increment Font Size Button
     const handleIncrementFontSize = () => {
       //Increment H4
@@ -218,8 +223,26 @@ function Cv() {
           setSubheadingFontSize(((numberOfPixelsToChange * numberOfTimesButtonCanBeClicked) + 12))
         }
         sectionSubheadingFont.forEach(e => { e.style.fontSize = `${subheadingFontSize}px` })
-      //
+      //Increment li
+        setListItemFontSize(listItemFontSize + numberOfPixelsToChange)
+        if( listItemFontSize === ((numberOfPixelsToChange * numberOfTimesButtonCanBeClicked) + 14) ){
+          setListItemFontSize(((numberOfPixelsToChange * numberOfTimesButtonCanBeClicked) + 14))
+        }
+        sectionListItemFont.forEach(e => { e.style.fontSize = `${listItemFontSize}px` })
+        sectionListItemFont.forEach(e => { e.style.marginBottom = `${listItemFontSize}px` })
+      //Increment li li
+        setListItemInnerFontSize(listItemInnerFontSize + numberOfPixelsToChange)
+        setListItemInnerLineHeightSize(listItemInnerLineHeightSize + numberOfPixelsToChange)
+        if( listItemInnerFontSize === ((numberOfPixelsToChange * numberOfTimesButtonCanBeClicked) + 12) ){
+          setListItemInnerFontSize(((numberOfPixelsToChange * numberOfTimesButtonCanBeClicked) + 12))
+        }
+        if (listItemInnerLineHeightSize === ((numberOfPixelsToChange * numberOfTimesButtonCanBeClicked) + 20)){
+          setListItemInnerLineHeightSize(((numberOfPixelsToChange * numberOfTimesButtonCanBeClicked) + 20))
+        }
+        sectionListItemInnerFont.forEach(e => { e.style.fontSize = `${listItemInnerFontSize}px` })
+        sectionListItemInnerFont.forEach(e => { e.style.lineHeight = `${listItemInnerLineHeightSize}px` })
     }
+    
     //Decrement Font Size Button
     const handleDecrementFontSize = () => {
       //Decrement H4
@@ -250,7 +273,24 @@ function Cv() {
           setSubheadingFontSize(12)
         }
         sectionSubheadingFont.forEach(e => { e.style.fontSize = `${subheadingFontSize}px` })
-      //
+      //Decrement li
+        setListItemFontSize(listItemFontSize - numberOfPixelsToChange)
+        if( listItemFontSize === (14) ){
+          setListItemFontSize(14)
+        }
+        sectionListItemFont.forEach(e => { e.style.fontSize = `${listItemFontSize}px` })
+        sectionListItemFont.forEach(e => { e.style.marginBottom = `${listItemFontSize}px` })
+      //Decrement li li
+        setListItemInnerFontSize(listItemInnerFontSize - numberOfPixelsToChange)
+        setListItemInnerLineHeightSize(listItemInnerLineHeightSize - numberOfPixelsToChange)
+        if( listItemInnerFontSize === 12 ){
+          setListItemInnerFontSize(12)
+        }
+        if (listItemInnerLineHeightSize === 20){
+          setListItemInnerLineHeightSize(20)
+        }
+        sectionListItemInnerFont.forEach(e => { e.style.fontSize = `${listItemInnerFontSize}px` })
+        sectionListItemInnerFont.forEach(e => { e.style.lineHeight = `${listItemInnerLineHeightSize}px` })
     }
 
   //
