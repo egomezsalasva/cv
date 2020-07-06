@@ -242,7 +242,7 @@ function Cv() {
         sectionListItemInnerFont.forEach(e => { e.style.fontSize = `${listItemInnerFontSize}px` })
         sectionListItemInnerFont.forEach(e => { e.style.lineHeight = `${listItemInnerLineHeightSize}px` })
     }
-    
+
     //Decrement Font Size Button
     const handleDecrementFontSize = () => {
       //Decrement H4
@@ -307,7 +307,8 @@ function Cv() {
           <div className="section">
             <h4>Me</h4>
             <div className="storyText">
-             <p>As a generalist, if you want to call it like that, I have hustled my way through life learning a few things on the way. I also like doing things my way like Frank Sinatra.</p>
+             <p>I consider myself to be a generalist, as I find interest in a wide range of subjects. I find this helps me have a different perspective in a certain field.</p>
+             <p>For better or for worse, I am somewhat of a perfectionist. It helps me do detailed work but it also slows down some projects.</p>
             </div>
             <div className="summaryText">
               <ul>
@@ -322,8 +323,8 @@ function Cv() {
               <p>I’m preferibly looking for a business on it’s early stages, where there is shared responsability and tasks in different fields.</p>
               <p>I really value purpose-driven companies. These are companies who’s main goal is not monetary but solving an important issue in society.</p>
               <p>I also value autonomy. I like when companies let their employees take their own decisions and let them manage themselves.</p>
-              <p>I also value mastery. I like when companies let their employees progress in their skills and think of long-term progression instead of short-term goals.</p>
-              <p>As an extra, I find the ’20% time’, where employees are given part of their time for sideprojects an interesting concept.</p>
+              <p>Finally, I value mastery. I like when companies let their employees progress in their skills and think of long-term progression as opposed to short-term goals.</p>
+              <p>As an extra, I find the ’20% time’, where employees are given part of their time for side projects an interesting concept.</p>
             </div>
             <div className="summaryText">
               <ul>
@@ -337,10 +338,10 @@ function Cv() {
           <div className="section">
             <h4>Education</h4>
             <div className="storyText">
-              <p>It all started at an English school in Mallorca where I  had to go everyday from kindergarden until I got kicked out right before my A levels.</p>
-              <p>After this, I went to a Spanish school to do the E.S.O. and bachillerato.</p>
-              <p>Then I went to London to do a year of A levels in Ealing Independent College but had to come back to Spain due to economic reasons.</p>
-              <p>Back in Spain I attended Elisava to do Graphic Design.</p>
+              <p>It all started at an English school in Mallorca where I had to attend everyday from kindergarden until I got kicked out right before my A levels.</p>
+              <p>After this, I went to a Spanish school to do the E.S.O. and Bachillerato.</p>
+              <p>Then I went to London to do a year of A levels at Ealing Independent College but had to come back to Spain due to economic reasons.</p>
+              <p>Back in Spain, I attended Elisava to do Graphic Design.</p>
             </div>
             <div className="summaryText">
               <ul>
@@ -354,16 +355,15 @@ function Cv() {
           <div className="section">
             <h4>Post-Education</h4>
             <div className="storyText">
-              <p>Once I left Elisava I deciced I was interested in business. So I decided to start making clothing as it was an affordable business to start, and made me enough money to live.</p>
-              <p>For the clothing idea I needed a website so I decided to learn how to make websites with an Adobe program called Muse. Which is a very flexible drag and drop software.</p>
+              <p>Once I left Elisava I realized I was interested in business. So I decided to start making clothing as it was a business I could afford to start, and made me enough money to live.</p>
+              <p>For the clothing, I needed a website so I started to learn how to make websites with an Adobe program called Muse.</p>
               <p>Then I realized I could earn some money making websites for other people, so I moved back to Mallorca and started Gryd-Design.</p>
-              <p>With Gryd-Design I made some flyers and went around door-to-door sales. Once I got a few projects running (Carpenters, Real Estate, Film Director, Hedge Fund, Artist, Fruit Shop) I managed to save enough to hire a fried to do the sales side so I could focus on website creation. I then hired an off-shore virtual assistant to investigate what businesses didn’t have websites so we could be more efficient on the sales side.</p>
-              <p>On the way I saw a lot of inspiration on websites like awwwards and cssdesignawards and saw limitations on with Adobe Muse. So I started learning coding on 2014 roughly. I learnt HTML, CSS and JavaScript.</p>
+              <p>With Gryd-Design I made some flyers and walked around doing door-to-door sales. Once I got a few projects running (Carpenter, Real Estate, Film Director, Hedge Fund, Artist, Fruit Shop) I managed to save enough to hire a friend to do the sales side. This allowed me to focus on website creation. I then hired an off-shore virtual assistant to investigate which businesses didn’t have a websites so we could be more efficient on the sales side.</p>
+              <p>On the way I saw a lot of inspiration on websites like awwwards and cssdesignawards and saw limitations with Adobe Muse. So I started learning coding on 2014 roughly. I learnt HTML, CSS and JavaScript.</p>
               <p>During this time I bought a fucking expensive screen-printing machine so I could offer that as an extra service to my customers at Gryd. It also allowed me to retake the clothing line I wanted to initially create.</p>
-              <p>I saw myself being involved in projects I didn’t particularly relate to on Gryd-Design and got offered a job for Estiber in Barcelona.</p>
-              <p>So I moved back to Barcelona. I thought it was a good ideas as it started to become somewhat of a tech-hub at the time.</p>
-              <p>I worked for Estiber for a year as a Lead Designer and was also involved in some of the Marketing (hand-coding Mailchimp emails). After the year we decided our values didn’t match so we stopped working together.</p>
-              <p>I went back into selling clothes while I learnt new technologies like React and Node and its correspondant modules and libraries. I came to work on a coffee shop on personal projects too and got a few odd jobs here and there making webistes. I ended up catching the attention of the founder of Apollo30 in a cafe and we got on well together so he offered me to work with them and I have been working there ever since as a freelancer.</p>
+              <p>I got offered a job for Estiber in Barcelona, so I moved back there. I thought it was a good idea since it was starting to become a tech-hub at the time.</p>
+              <p>I worked for Estiber for a year as a Lead Designer and was also involved in some of the Marketing roles (hand-coding Mailchimp emails). After the year we decided our values didn’t match so we stopped working together.</p>
+              <p>I went back into selling clothes while I learnt new technologies like React and Node and its correspondant modules and libraries. I worked on personal projects too, and got a few odd jobs here and there making webistes. I ended up catching the attention of the founder of Apollo30 in a cafe and we got on well, so he offered me to work with them and I have been working there as a freelancer ever since.</p>
             </div>
             <div className="summaryText">
               <ul>
