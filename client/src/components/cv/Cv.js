@@ -1,9 +1,9 @@
 //IMPORTS
 //-Modules
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 // import LocomotiveScroll from 'locomotive-scroll'
-import { gsap } from 'gsap'
+// import { gsap } from 'gsap'
 //-Components
 import Heading from './Heading'
 
@@ -279,12 +279,8 @@ function Cv() {
         sectionListItemInnerFont.forEach(e => { e.style.lineHeight = `${listItemInnerLineHeightSize}px` })
     }
 
-    //Animation Title
-    const [headingAnim] = useState(gsap.timeline({ paused: false }))
-    useEffect(() => {
-      headingAnim
-        .to("h4", 0.4, { autoAlpha: 1 })
-    }, [headingAnim]);
+
+    console.log(document.querySelector(".test"))
 
   //
   return (
@@ -299,7 +295,7 @@ function Cv() {
         <div className="sectionsInner">
           <div className="section">
 
-            <Heading headingName="Me"/>
+            <Heading headingName="Me" className="test"/>
 
             <div className="storyText">
              <p>I consider myself to be a generalist, as I find interest in a wide range of subjects. I find this helps me have a different perspective in a certain field.</p>
@@ -313,7 +309,7 @@ function Cv() {
             </div>
           </div>
           <div className="section">
-            <h4>What I’m Looking For</h4>
+            <Heading headingName="What I’m Looking For"/>
             <div className="storyText">
               <p>I’m preferibly looking for a business on it’s early stages, where there is shared responsability and tasks in different fields.</p>
               <p>I really value purpose-driven companies. These are companies who’s main goal is not monetary but solving an important issue in society.</p>

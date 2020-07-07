@@ -2,7 +2,7 @@
 //-Modules
 import React from 'react'
 import styled from 'styled-components'
-import { gsap } from 'gsap'
+// import { gsap } from 'gsap'
 
 
 
@@ -11,7 +11,6 @@ import { gsap } from 'gsap'
 
 //-Components
 const HeadingContainer = styled.div`
-    background: red;
     h4{
         display: inline-block;
         background: black;
@@ -19,37 +18,32 @@ const HeadingContainer = styled.div`
         font-family: 'SpaceMono-Regular';
         font-size: 14px;
         text-align: center;
-        padding: 0 15px 0 10px;
         font-weight: 300;
         margin-bottom: 20px;
     }
-    .box{
+    /* .box{
+        display: inline-block;
+        width: 100%;
         background: green;
         color: black;
-        padding: 0 15px 0 10px;
-        font-weight: 300;
-        margin-bottom: 20px;
-    }
+        height: 21px;
+    } */
     .front{
-        opacity: 0;
-        transform: translateX(-100%);
+        opacity: 1;
         background: black;
         color: white;
         padding: 0 15px 0 10px;
-        font-weight: 300;
-        margin-bottom: 20px;
     }
 `
 
 
 //MAIN COMPONENT
 const Heading = ({headingName}) => {
-  return (          
-    <HeadingContainer>
-        <h4 className="box">{headingName}</h4>
-        <h4 className="front">{headingName}</h4>
-        
-    </HeadingContainer>   
-  )
+    return (          
+        <HeadingContainer>
+            {/* <div className="box"/> */}
+            <h4 className="front">{headingName}</h4>   
+        </HeadingContainer>   
+    )
 }
 export default Heading;
