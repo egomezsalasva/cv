@@ -1,9 +1,11 @@
 //IMPORTS
 //-Modules
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 // import LocomotiveScroll from 'locomotive-scroll'
-
+import { gsap } from 'gsap'
+//-Components
+import Heading from './Heading'
 
 
 //STYLE
@@ -52,23 +54,6 @@ const SectionsOuter = styled.div`
     }
     .summaryText{
       display: none;
-    }
-    .titleBox{
-      width: 0;
-      background: black;
-    }
-    h4{
-      opacity: 0;
-      display: inline-block;
-      background: black;
-      color: white;
-      line-height: 21px;
-      font-family: 'SpaceMono-Regular';
-      font-size: 14px;
-      text-align: center;
-      padding: 0 15px 0 10px;
-      font-weight: 300;
-      margin-bottom: 20px;
     }
     h5{
       font-family: 'Graphik-Semibold';
@@ -294,7 +279,12 @@ function Cv() {
         sectionListItemInnerFont.forEach(e => { e.style.lineHeight = `${listItemInnerLineHeightSize}px` })
     }
 
-    
+    //Animation Title
+    const [headingAnim] = useState(gsap.timeline({ paused: false }))
+    useEffect(() => {
+      headingAnim
+        .to("h4", 0.4, { autoAlpha: 1 })
+    }, [headingAnim]);
 
   //
   return (
@@ -308,9 +298,9 @@ function Cv() {
       <SectionsOuter>
         <div className="sectionsInner">
           <div className="section">
-            <div className="titleBox">
-              <h4>Me</h4>
-            </div>
+
+            <Heading headingName="Me"/>
+
             <div className="storyText">
              <p>I consider myself to be a generalist, as I find interest in a wide range of subjects. I find this helps me have a different perspective in a certain field.</p>
              <p>For better or for worse, I am somewhat of a perfectionist. It helps me do detailed work but it also slows down some projects.</p>
