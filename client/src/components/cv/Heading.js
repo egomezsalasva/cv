@@ -11,38 +11,31 @@ import styled from 'styled-components'
 
 //-Components
 const HeadingContainer = styled.div`
+    /* width: 0;
+    overflow: hidden; */
     h4{
         display: inline-block;
-        background: black;
-        line-height: 21px;
-        font-family: 'SpaceMono-Regular';
-        font-size: 14px;
-        text-align: center;
-        font-weight: 300;
-        margin-bottom: 20px;
-    }
-    /* .box{
-        display: inline-block;
-        width: 100%;
-        background: green;
-        color: black;
-        height: 21px;
-    } */
-    .front{
-        opacity: 1;
+        /* height: 21px; */
+        /* overflow: hidden; */
         background: black;
         color: white;
         padding: 0 15px 0 10px;
+        font-family: 'SpaceMono-Regular';
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+        font-weight: 300;
+        margin-bottom: 20px; 
     }
 `
 
 
 //MAIN COMPONENT
-const Heading = ({headingName}) => {
+const Heading = ({ headingName, containerRef, h4RefProp }) => {
+
     return (          
-        <HeadingContainer>
-            {/* <div className="box"/> */}
-            <h4 className="front">{headingName}</h4>   
+        <HeadingContainer ref={containerRef}>
+            <h4 ref={h4RefProp}>{headingName}</h4>   
         </HeadingContainer>   
     )
 }

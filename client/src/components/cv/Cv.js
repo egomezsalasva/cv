@@ -122,17 +122,6 @@ const SectionsOuter = styled.div`
         margin-bottom: -20px;
       }
     }
-
-    table{
-      width: 100%;
-    }
-    td{
-      font-size: 14px;
-      padding-bottom: 20px;
-    }
-    .lastTd{
-      padding-bottom: 0;
-    }
 `
 
 
@@ -279,8 +268,16 @@ function Cv() {
         sectionListItemInnerFont.forEach(e => { e.style.lineHeight = `${listItemInnerLineHeightSize}px` })
     }
 
-
-    console.log(document.querySelector(".test"))
+    // let headingRef = useRef(null)
+    // let containerRef = useRef(null)
+    // useEffect(() => {
+    //     gsap.to([containerRef], {
+    //       duration: 0.4,
+    //       width: "auto",
+          
+    //     })
+    // })
+    // containerRefProp={ el => (containerRef = el)} h4RefProp={ el => (headingRef = el)}
 
   //
   return (
@@ -295,7 +292,7 @@ function Cv() {
         <div className="sectionsInner">
           <div className="section">
 
-            <Heading headingName="Me" className="test"/>
+            <Heading headingName="Me"/>
 
             <div className="storyText">
              <p>I consider myself to be a generalist, as I find interest in a wide range of subjects. I find this helps me have a different perspective in a certain field.</p>
@@ -327,7 +324,9 @@ function Cv() {
             </div>
           </div>
           <div className="section">
-            <h4>Education</h4>
+
+            <Heading headingName="Education"/>
+
             <div className="storyText">
               <p>It all started at an English school in Mallorca where I had to attend everyday from kindergarden until I got kicked out right before my A levels.</p>
               <p>After this, I went to a Spanish school to do the E.S.O. and Bachillerato.</p>
@@ -344,7 +343,9 @@ function Cv() {
             </div>
           </div>
           <div className="section">
-            <h4>Post-Education</h4>
+
+            <Heading headingName="Post-Education"/>
+
             <div className="storyText">
               <p>Once I left Elisava I realized I was interested in business. So I decided to start making clothing as it was a business I could afford to start, and made me enough money to live.</p>
               <p>For the clothing, I needed a website so I started to learn how to make websites with an Adobe program called Muse.</p>
@@ -406,7 +407,9 @@ function Cv() {
             </div>
           </div>
           <div className="section">
-            <h4>Skills</h4>
+
+            <Heading headingName="Skills"/>
+
             <h5>Design</h5>
             <div className="tagContainer">
               <div className="tag">Sketch App</div>
@@ -451,7 +454,9 @@ function Cv() {
             </div>
           </div>
           <div className="section">
-            <h4>Interests</h4>
+
+            <Heading headingName="Interests"/>
+
             <ul className="interestList">
               <li>Cryptography</li>
               <li>Behavioural Science</li>
@@ -468,18 +473,24 @@ function Cv() {
             </ul>
           </div>
           <div className="section">
-            <h4>Languages</h4>
+
+            <Heading headingName="Languages"/>
+
             <ul>
               <li>Spanish: First Language</li>
               <li>English: Second Language</li>
             </ul>
           </div>
           <div className="section">
-            <h4>Links</h4>
+
+            <Heading headingName="Links"/>
+  
             <a href="https://github.com/egomezsalasva" target="_blank" rel="noopener noreferrer">https://github.com/egomezsalasva</a>
           </div>
           <div className="section">
-            <h4>Lets Meet</h4>
+
+            <Heading headingName="Lets Meet"/>
+  
             <p>I do like my coffee, so lets meet for one. <br/> Send me an email so we can schedule a call first or a meeting over a cup of coffee.</p>
           </div>
         </div>
