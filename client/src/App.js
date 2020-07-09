@@ -35,7 +35,7 @@ function App() {
         <Route path="/portfolio">
           <Portfolio />
         </Route>
-        <Route path="/librar">
+        <Route path="/library">
           <Library />
         </Route>
       </Switch>
