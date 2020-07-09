@@ -269,10 +269,6 @@ function Cv() {
     }
 
     //Anim
-    let headingOne = useRef(null)
-    let headingTwo = useRef(null)
-    let headingThree = useRef(null)
-
     const headingTl = gsap.timeline()
     useEffect(() => {
         headingTl.from(".heading", 0.6, { x: "-150%", stagger: 0.4 })
@@ -296,11 +292,7 @@ function Cv() {
 
           <div className="section">
 
-            <Heading 
-              headingName="Me" 
-              headingRefProp = { el => headingOne = el }
-              classProp="heading"
-            />
+            <Heading headingName="Me" classProp="heading" />
 
             <div className="storyText">
              <p>I consider myself to be a generalist, as I find interest in a wide range of subjects. I find this helps me have a different perspective in a certain field.</p>
@@ -315,11 +307,8 @@ function Cv() {
           </div>
 
           <div className="section">
-            <Heading 
-              headingName="What I’m Looking For"
-              headingRefProp = { el => headingTwo = el }
-              classProp="heading"
-            />
+
+            <Heading headingName="What I’m Looking For" classProp="heading" />
 
             <div className="storyText">
               <p>I’m preferibly looking for a business on it’s early stages, where there is shared responsability and tasks in different fields.</p>
@@ -340,11 +329,7 @@ function Cv() {
 
           <div className="section">
 
-            <Heading 
-              headingName="Education"
-              headingRefProp = { el => headingThree = el }
-              classProp="heading"
-            />
+            <Heading headingName="Education" classProp="heading" />
 
             <div className="storyText">
               <p>It all started at an English school in Mallorca where I had to attend everyday from kindergarden until I got kicked out right before my A levels.</p>
@@ -364,7 +349,7 @@ function Cv() {
 
           <div className="section">
 
-            <Heading headingName="Post-Education"/>
+            <Heading headingName="Post-Education" classProp="heading" />
 
             <div className="storyText">
               <p>Once I left Elisava I realized I was interested in business. So I decided to start making clothing as it was a business I could afford to start, and made me enough money to live.</p>
@@ -429,7 +414,7 @@ function Cv() {
 
           <div className="section">
 
-            <Heading headingName="Skills"/>
+            <Heading headingName="Skills" classProp="heading" />
 
             <h5>Design</h5>
             <div className="tagContainer">
@@ -477,7 +462,7 @@ function Cv() {
 
           <div className="section">
 
-            <Heading headingName="Interests"/>
+            <Heading headingName="Interests" classProp="heading" />
 
             <ul className="interestList">
               <li>Cryptography</li>
@@ -497,7 +482,7 @@ function Cv() {
 
           <div className="section">
 
-            <Heading headingName="Languages"/>
+            <Heading headingName="Languages" classProp="heading" />
 
             <ul>
               <li>Spanish: First Language</li>
@@ -507,14 +492,14 @@ function Cv() {
 
           <div className="section">
 
-            <Heading headingName="Links"/>
+            <Heading headingName="Links" classProp="heading" />
   
             <a href="https://github.com/egomezsalasva" target="_blank" rel="noopener noreferrer">https://github.com/egomezsalasva</a>
           </div>
 
           <div className="section">
 
-            <Heading headingName="Lets Meet"/>
+            <Heading headingName="Lets Meet" classProp="heading" />
   
             <p>I do like my coffee, so lets meet for one. <br/> Send me an email so we can schedule a call first or a meeting over a cup of coffee.</p>
           </div>
