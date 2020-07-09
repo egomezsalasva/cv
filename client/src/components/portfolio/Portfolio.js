@@ -22,11 +22,12 @@ const portfolioData = [
   }
 ]
 
+
 //STYLE
 //-Components
 const SectionsOuter = styled.div`
   width: 100%;
-  height: calc(100vh - 210px );
+  height: calc(100vh - 202px );
   margin-top: 30px;
   overflow: scroll;
   .section{
@@ -34,7 +35,7 @@ const SectionsOuter = styled.div`
     max-width: 650px;
     .portfolioImg{
       width: 100%;
-      height: 200px;
+      height: 29.9850075vh;
       background-repeat: no-repeat;
 
     }

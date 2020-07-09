@@ -2,8 +2,6 @@
 //-Modules
 import React from 'react'
 import styled from 'styled-components'
-// import { gsap } from 'gsap'
-
 
 
 //STYLE
@@ -11,12 +9,9 @@ import styled from 'styled-components'
 
 //-Components
 const HeadingContainer = styled.div`
-    /* width: 0;
-    overflow: hidden; */
+    overflow: hidden;
     h4{
         display: inline-block;
-        /* height: 21px; */
-        /* overflow: hidden; */
         background: black;
         color: white;
         padding: 0 15px 0 10px;
@@ -31,12 +26,11 @@ const HeadingContainer = styled.div`
 
 
 //MAIN COMPONENT
-const Heading = ({ headingName, containerRef, h4RefProp }) => {
-
+const Heading = ({ headingName, headingRefProp }) => {
     return (          
-        <HeadingContainer ref={containerRef}>
-            <h4 ref={h4RefProp}>{headingName}</h4>   
+        <HeadingContainer>
+            <h4 ref={headingRefProp}>{headingName}</h4>   
         </HeadingContainer>   
     )
 }
-export default Heading;
+export default Heading

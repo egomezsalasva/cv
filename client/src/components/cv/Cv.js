@@ -1,9 +1,9 @@
 //IMPORTS
 //-Modules
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
 // import LocomotiveScroll from 'locomotive-scroll'
-// import { gsap } from 'gsap'
+import { gsap } from 'gsap'
 //-Components
 import Heading from './Heading'
 
@@ -268,31 +268,38 @@ function Cv() {
         sectionListItemInnerFont.forEach(e => { e.style.lineHeight = `${listItemInnerLineHeightSize}px` })
     }
 
-    // let headingRef = useRef(null)
-    // let containerRef = useRef(null)
-    // useEffect(() => {
-    //     gsap.to([containerRef], {
-    //       duration: 0.4,
-    //       width: "auto",
-          
-    //     })
-    // })
-    // containerRefProp={ el => (containerRef = el)} h4RefProp={ el => (headingRef = el)}
+    //Anim
+    let headingOne = useRef(null)
+    let headingTwo = useRef(null)
+
+
+    useEffect( () => {
+        const tl = gsap.timeline()
+        tl.from(headingOne, 0.8, { x: -62.1406 })
+          .from(headingOne, 0.4, { color: "black" })
+          .from(headingTwo, 0.8, { x: -216.375 })
+          .from(headingTwo, 0.4, { color: "black" })
+    }, [])
+    
 
   //
   return (
     <>
       <CvButtonsContainer>
         <div className="summaryButton" onClick={handleToggleSummaryButton}>Don’t Make Me Read All This Bollocks</div>
-        <div className="textResizeButton increaseSizeButton" onClick={handleIncrementFontSize}>+</div>
+        <div className="textResizeButton increaseSizeButton" onClick={ handleIncrementFontSize}>+</div>
         <div className="textResizeButton decreseSizeButton" onClick={handleDecrementFontSize}>-</div>
       </CvButtonsContainer>
       
       <SectionsOuter>
         <div className="sectionsInner">
+
           <div className="section">
 
-            <Heading headingName="Me"/>
+            <Heading 
+              headingName="Me" 
+              headingRefProp = { el => headingOne = el }
+            />
 
             <div className="storyText">
              <p>I consider myself to be a generalist, as I find interest in a wide range of subjects. I find this helps me have a different perspective in a certain field.</p>
@@ -305,8 +312,13 @@ function Cv() {
               </ul>
             </div>
           </div>
+
           <div className="section">
-            <Heading headingName="What I’m Looking For"/>
+            <Heading 
+              headingName="What I’m Looking For"
+              headingRefProp = { el => headingTwo = el }
+            />
+
             <div className="storyText">
               <p>I’m preferibly looking for a business on it’s early stages, where there is shared responsability and tasks in different fields.</p>
               <p>I really value purpose-driven companies. These are companies who’s main goal is not monetary but solving an important issue in society.</p>
@@ -323,6 +335,7 @@ function Cv() {
               </ul>
             </div>
           </div>
+
           <div className="section">
 
             <Heading headingName="Education"/>
@@ -342,6 +355,7 @@ function Cv() {
               </ul>
             </div>
           </div>
+
           <div className="section">
 
             <Heading headingName="Post-Education"/>
@@ -406,6 +420,7 @@ function Cv() {
               </ul>
             </div>
           </div>
+
           <div className="section">
 
             <Heading headingName="Skills"/>
@@ -453,6 +468,7 @@ function Cv() {
               <div className="tag">Cypress</div>
             </div>
           </div>
+
           <div className="section">
 
             <Heading headingName="Interests"/>
@@ -472,6 +488,7 @@ function Cv() {
               <li>Blockchain</li>
             </ul>
           </div>
+
           <div className="section">
 
             <Heading headingName="Languages"/>
@@ -481,18 +498,21 @@ function Cv() {
               <li>English: Second Language</li>
             </ul>
           </div>
+
           <div className="section">
 
             <Heading headingName="Links"/>
   
             <a href="https://github.com/egomezsalasva" target="_blank" rel="noopener noreferrer">https://github.com/egomezsalasva</a>
           </div>
+
           <div className="section">
 
             <Heading headingName="Lets Meet"/>
   
             <p>I do like my coffee, so lets meet for one. <br/> Send me an email so we can schedule a call first or a meeting over a cup of coffee.</p>
           </div>
+
         </div>
       </SectionsOuter>
     </>      
