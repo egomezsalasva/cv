@@ -271,14 +271,14 @@ function Cv() {
     //Anim
     let headingOne = useRef(null)
     let headingTwo = useRef(null)
+    let headingThree = useRef(null)
 
+    const headingTl = gsap.timeline()
+    useEffect(() => {
+        headingTl.from(".heading", 0.6, { x: "-150%", stagger: 0.4 })
+                 .from(".heading", 0.3, { color: "black", stagger: 0.4 }, "-=0.8")
 
-    useEffect( () => {
-        const tl = gsap.timeline()
-        tl.from(headingOne, 0.8, { x: -62.1406 })
-          .from(headingOne, 0.4, { color: "black" })
-          .from(headingTwo, 0.8, { x: -216.375 })
-          .from(headingTwo, 0.4, { color: "black" })
+                 .from(".storyText", 0.8, { y: 5, autoAlpha: 0 }, "-=1.4")
     }, [])
     
 
@@ -299,6 +299,7 @@ function Cv() {
             <Heading 
               headingName="Me" 
               headingRefProp = { el => headingOne = el }
+              classProp="heading"
             />
 
             <div className="storyText">
@@ -317,6 +318,7 @@ function Cv() {
             <Heading 
               headingName="What I’m Looking For"
               headingRefProp = { el => headingTwo = el }
+              classProp="heading"
             />
 
             <div className="storyText">
@@ -338,7 +340,11 @@ function Cv() {
 
           <div className="section">
 
-            <Heading headingName="Education"/>
+            <Heading 
+              headingName="Education"
+              headingRefProp = { el => headingThree = el }
+              classProp="heading"
+            />
 
             <div className="storyText">
               <p>It all started at an English school in Mallorca where I had to attend everyday from kindergarden until I got kicked out right before my A levels.</p>

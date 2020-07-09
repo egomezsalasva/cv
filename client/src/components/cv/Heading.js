@@ -26,10 +26,10 @@ const HeadingContainer = styled.div`
 
 
 //MAIN COMPONENT
-const Heading = ({ headingName, headingRefProp }) => {
+const Heading = ({ headingName, headingRefProp, classProp }) => {
     return (          
         <HeadingContainer>
-            <h4 ref={headingRefProp}>{headingName}</h4>   
+            <h4 ref={headingRefProp} className={classProp}>{headingName}</h4>   
         </HeadingContainer>   
     )
 }
