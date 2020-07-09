@@ -44,7 +44,7 @@ const SectionsOuter = styled.div`
 
 
 //MAIN COMPONENT
-function Portfolio() {
+const Portfolio = () => {
   return (
     <>
       <SectionsOuter>
@@ -70,4 +70,4 @@ function Portfolio() {
     </>     
   )
 }
-export default Portfolio;
+export default Portfolio
