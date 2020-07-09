@@ -3,7 +3,7 @@
 import React from 'react'
 import styled from 'styled-components'
 //-Components
-import Heading from '../cv/Heading'
+import Heading from '../global/shared/Heading'
 //-Images
 import scrannysHouseImg from '../../images/scrannysHouse.png'
 import apollo30Img from '../../images/apollo30.png'

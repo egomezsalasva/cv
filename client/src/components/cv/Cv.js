@@ -5,7 +5,7 @@ import styled from 'styled-components'
 // import LocomotiveScroll from 'locomotive-scroll'
 import { gsap } from 'gsap'
 //-Components
-import Heading from './Heading'
+import Heading from '../global/shared/Heading'
 
 
 //STYLE
