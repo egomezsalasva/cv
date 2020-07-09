@@ -27,7 +27,7 @@ const portfolioData = [
 //-Components
 const SectionsOuter = styled.div`
   width: 100%;
-  height: calc(100vh - 202px );
+  height: calc(100vh - 202px);
   margin-top: 30px;
   overflow: scroll;
   .section{
