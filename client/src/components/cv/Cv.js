@@ -269,18 +269,19 @@ function Cv() {
     }
 
     //Anim
-    const headingTl = gsap.timeline()
-    useEffect(() => {
-        headingTl.from(".heading", 0.6, { x: "-150%", stagger: 0.4 })
-                 .from(".heading", 0.3, { color: "black", stagger: 0.4 }, "-=0.8")
+    // const headingTl = gsap.timeline()
+    // useEffect(() => {
+    //     headingTl.from(".heading", 0.6, { x: "-150%", stagger: 0.4 })
+    //              .from(".heading", 0.3, { color: "black", stagger: 0.4 }, "-=0.8")
 
-                 .from(".storyText", 0.8, { y: 5, autoAlpha: 0 }, "-=1.4")
-    }, [])
+    //              .from(".storyText", 0.8, { y: 5, autoAlpha: 0 }, "-=1.4")
+    // }, [])
     
 
   //
   return (
     <>
+
       <CvButtonsContainer>
         <div className="summaryButton" onClick={handleToggleSummaryButton}>Don’t Make Me Read All This Bollocks</div>
         <div className="textResizeButton increaseSizeButton" onClick={ handleIncrementFontSize}>+</div>
@@ -506,6 +507,7 @@ function Cv() {
 
         </div>
       </SectionsOuter>
+      
     </>      
   )
 }
