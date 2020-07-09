@@ -26,6 +26,16 @@ const SectionsOuter = styled.div`
       li{
         font-size: 14px;
         margin-bottom: 14px;
+        .bookTitle{
+          font-weight: 700;
+        }
+        .bookSubtitle{
+          font-weight: 300;
+        }
+        .bookAuthor{
+          font-family: 'Graphik-RegularItalic';
+          font-weight: 300;
+        }
       }
     }
   }
@@ -41,10 +51,18 @@ const Library = () => {
         <div className="sectionsInner">
 
           <div className="section">
-            <Heading headingName="Languages" classProp="heading" />
+            <Heading headingName="Technology" classProp="heading" />
             <ul>
-              <li>Spanish: First Language</li>
-              <li>English: Second Language</li>
+              <li>
+                <span className="bookTitle">Crypto</span>
+                <span className="bookSubtitle">, How the code rebels beat the goverment- saving privacy in the digital age, </span>
+                <span className="bookAuthor">Steven Levy</span>
+              </li>
+              <li>
+                <span className="bookTitle">Computer Science Distilled</span>
+                <span className="bookSubtitle">, Learn the art of solving computational problems, </span>
+                <span className="bookAuthor">Wladston Ferreira Filho</span>
+              </li>
             </ul>
           </div>
 
