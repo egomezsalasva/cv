@@ -6,24 +6,10 @@ import { gsap } from 'gsap'
 //-Components
 import Heading from '../global/shared/Heading'
 //-Variables
-import { device } from "../../data/responsiveVariables/devices";
+import { devices, colors, fonts, responsiveWidthHeights } from "../../data/styling/stylingVars";
 
 
 //STYLE
-//-Variables
-//-//-Colors
-const frontColor = "#000"
-const backColor = "#F8F9F8"
-//-//-Fonts
-const displayFont = 'Graphik-Semibold'
-const fontSemibold = 'Graphik-Semibold'
-const fontRegular = 'Graphik-Regular'
-const fntSz12 = 12
-const fntSz14 = 14
-const lnHt20 = 20
-//-//-Widths & Heights
-const w30px = "8vw"
-//-//-Element Specific
 const tagBottomMargin = "20px"
 const tagsExtraWidth = "10px"
 const ulTranslate = "15px"
@@ -62,8 +48,8 @@ const SectionsOuter = styled.div`
   overflow: scroll;
   .section{
     max-width: 600px;
-    margin: 0 ${w30px} 50px;
-    @media ${device.tablet} {
+    margin: 0 ${responsiveWidthHeights.w30px} 50px;
+    @media ${devices.tablet} {
       margin: 0 auto 50px;
     }
 
@@ -74,21 +60,21 @@ const SectionsOuter = styled.div`
       display: none;
     }
     h5{
-      font-family: ${fontSemibold};
-      font-size: ${fntSz12}px;
+      font-family: ${fonts.fntSemiBold};
+      font-size: ${fonts.fntSz12};
     }
     p{
       margin-bottom: 19px;
-      font-family: ${fontRegular};
+      font-family: ${fonts.fntRegular};
       font-weight: 300;
-      font-size: ${fntSz14}px;
-      line-height: ${lnHt20}px;
-      color: ${frontColor};
+      font-size: ${fonts.fntSz14}px;
+      line-height: ${fonts.lnHt20}px;
+      color: ${colors.front};
     }
     a{
       display: block;
-      font-size: ${fntSz14}px;
-      color: ${frontColor};
+      font-size: ${fonts.fntSz14}px;
+      color: ${colors.front};
     }
     .interestList{      
       li{
@@ -101,17 +87,17 @@ const SectionsOuter = styled.div`
       width: calc(100% - ${ulTranslate});
       transform:translateX(${ulTranslate});
       li{
-        font-size: ${fntSz14}px;
-        margin-bottom: ${fntSz14}px;
+        font-size: ${fonts.fntSz14}px;
+        margin-bottom: ${fonts.fntSz14}px;
       }
       ul{
-        margin-top: ${fntSz14}px;
+        margin-top: ${fonts.fntSz14}px;
         margin-bottom: 30px;
         list-style-type: disc;
         li{
           margin-bottom: 0;
-          font-size: ${fntSz12}px;
-          line-height: ${lnHt20}px;
+          font-size: ${fonts.fntSz12}px;
+          line-height: ${fonts.lnHt20}px;
         }
       }
     }
@@ -131,7 +117,7 @@ const SectionsOuter = styled.div`
         padding: 0 10px;
         line-height: 30px;
         margin: 0 10px ${tagBottomMargin};
-        background: #F8F9F8;
+        background: ${colors.back};
         border: 1px solid rgba(242,242,241,0.50);
         box-shadow: -5px -5px 10px 0 #FFFFFF, 5px 5px 10px 0 #F2F2F1;
         border-radius: 5px;
