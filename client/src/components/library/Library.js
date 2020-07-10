@@ -1,6 +1,6 @@
 //IMPORTS
 //-Modules
-import React, { useState, useRef, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 //-Components
 import Heading from '../global/shared/Heading'
@@ -8,8 +8,6 @@ import Heading from '../global/shared/Heading'
 
 //STYLE
 //-Variables
-const tagBottomMargin = "20px"
-const tagsExtraWidth = "10px"
 const ulTranslate = "15px"
 const w30px = "8vw"
 //-Components

@@ -1,8 +1,8 @@
 //IMPORTS
 //-Modules
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-// import { gsap } from 'gsap'
+import { gsap } from 'gsap'
 //-Components
 import Heading from '../global/shared/Heading'
 //-Variables
@@ -22,9 +22,9 @@ const CvButtonsContainer = styled.div`
   .summaryButton{
     display: inline-block;
     padding: 13px 20px 10px;
-    border: 1px solid #000;
-    font-family: 'Graphik-Regular';
-    font-size: 12px;
+    border: 1px solid ${colors.front};
+    font-family: ${fonts.fntRegular};
+    font-size: ${fonts.fntSz12};
     text-align: center;
     cursor: pointer;
   }
@@ -157,20 +157,26 @@ function Cv() {
     const handleToggleSummaryButton = () => {
 
       if(toggleSummaryButton === "OFF"){
+        //Animation
 
-        document.querySelector(".summaryButton").innerHTML = "Tell Me Your Story"
+        //Handle switch of button text
+        document.querySelector(".summaryButton span").innerHTML = "Tell Me Your Story"
+        //Handle switch of cv text
         document.querySelectorAll(".storyText").forEach(e => { e.style.display = "none" })
         document.querySelectorAll(".summaryText").forEach(e => { e.style.display = "block" })
+        //Toggle State
         setToggleSummaryButton("ON")
-
       } else if (toggleSummaryButton === "ON") {
+        //Animation
 
-        document.querySelector(".summaryButton").innerHTML = "Don’t Make Me Read All This Bollocks"
+        //Handle switch of button text
+        document.querySelector(".summaryButton span").innerHTML = "Don’t Make Me Read All This"
+        //Handle switch of cv text
         document.querySelectorAll(".storyText").forEach(e => { e.style.display = "block" })
         document.querySelectorAll(".summaryText").forEach(e => { e.style.display = "none" })
+        //Toggle State
         setToggleSummaryButton("OFF")
       }
-
     }
 
   //Font Sizing
@@ -298,6 +304,7 @@ function Cv() {
 
     //              .from(".storyText", 0.8, { y: 5, autoAlpha: 0 }, "-=1.4")
     // }, [])
+
     
 
   //
@@ -305,9 +312,15 @@ function Cv() {
     <>
 
       <CvButtonsContainer>
-        <div className="summaryButton" onClick={handleToggleSummaryButton}>Don’t Make Me Read All This Bollocks</div>
-        <div className="textResizeButton increaseSizeButton" onClick={ handleIncrementFontSize}>+</div>
-        <div className="textResizeButton decreseSizeButton" onClick={handleDecrementFontSize}>-</div>
+        <div className="summaryButton" onClick={handleToggleSummaryButton}>
+          <span>Don’t Make Me Read All This</span>
+        </div>
+        <div className="textResizeButton increaseSizeButton" onClick={ handleIncrementFontSize}>
+          <span>+</span>
+        </div>
+        <div className="textResizeButton decreseSizeButton" onClick={handleDecrementFontSize}>
+          <span>-</span>
+        </div>
       </CvButtonsContainer>
       
       <SectionsOuter>
