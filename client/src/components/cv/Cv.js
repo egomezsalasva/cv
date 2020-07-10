@@ -2,17 +2,32 @@
 //-Modules
 import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
-// import LocomotiveScroll from 'locomotive-scroll'
 import { gsap } from 'gsap'
 //-Components
 import Heading from '../global/shared/Heading'
+//-Variables
+import { device } from "../../data/responsiveVariables/devices";
 
 
 //STYLE
 //-Variables
+//-//-Colors
+const frontColor = "#000"
+const backColor = "#F8F9F8"
+//-//-Fonts
+const displayFont = 'Graphik-Semibold'
+const fontSemibold = 'Graphik-Semibold'
+const fontRegular = 'Graphik-Regular'
+const fntSz12 = 12
+const fntSz14 = 14
+const lnHt20 = 20
+//-//-Widths & Heights
+const w30px = "8vw"
+//-//-Element Specific
 const tagBottomMargin = "20px"
 const tagsExtraWidth = "10px"
 const ulTranslate = "15px"
+
 //-Components
 const CvButtonsContainer = styled.div`
   margin-top: 30px;
@@ -46,8 +61,11 @@ const SectionsOuter = styled.div`
   margin-top: 30px;
   overflow: scroll;
   .section{
-    margin: 0 30px 50px;
-    max-width: 650px;
+    max-width: 600px;
+    margin: 0 ${w30px} 50px;
+    @media ${device.tablet} {
+      margin: 0 auto 50px;
+    }
 
     .storyText{
       display: block;
@@ -56,47 +74,48 @@ const SectionsOuter = styled.div`
       display: none;
     }
     h5{
-      font-family: 'Graphik-Semibold';
-      font-size: 12px;
+      font-family: ${fontSemibold};
+      font-size: ${fntSz12}px;
     }
     p{
-      font-family: 'Graphik-Regular';
-      font-size: 14px;
-      color: #000;
-      line-height: 19px;
-      font-weight: 300;
       margin-bottom: 19px;
+      font-family: ${fontRegular};
+      font-weight: 300;
+      font-size: ${fntSz14}px;
+      line-height: ${lnHt20}px;
+      color: ${frontColor};
     }
     a{
       display: block;
-      color: black;
-      font-size: 14px
+      font-size: ${fntSz14}px;
+      color: ${frontColor};
     }
     .interestList{      
       li{
-        list-style-type: disc;
-        display: inline-block;
         width: 49%;
+        display: inline-block;
+        list-style-type: disc; /* BUG Disc can't be seen */
       }
     }
     ul{
-      transform:translateX(${ulTranslate});
       width: calc(100% - ${ulTranslate});
+      transform:translateX(${ulTranslate});
       li{
-        font-size: 14px;
-        margin-bottom: 14px;
+        font-size: ${fntSz14}px;
+        margin-bottom: ${fntSz14}px;
       }
       ul{
-        margin-top: 14px;
+        margin-top: ${fntSz14}px;
         margin-bottom: 30px;
         list-style-type: disc;
         li{
-          font-size: 12px;
           margin-bottom: 0;
-          line-height: 20px;
+          font-size: ${fntSz12}px;
+          line-height: ${lnHt20}px;
         }
       }
     }
+    
     .tagContainer{
       position: relative;
       left: -${tagsExtraWidth};

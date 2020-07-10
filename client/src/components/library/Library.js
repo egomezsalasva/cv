@@ -11,6 +11,7 @@ import Heading from '../global/shared/Heading'
 const tagBottomMargin = "20px"
 const tagsExtraWidth = "10px"
 const ulTranslate = "15px"
+const w30px = "8vw"
 //-Components
 const SectionsOuter = styled.div`
   width: 100%;
@@ -18,7 +19,7 @@ const SectionsOuter = styled.div`
   margin-top: 30px;
   overflow: scroll;
   .section{
-    margin: 0 30px 50px;
+    margin: 0 ${w30px} 50px;
     max-width: 650px;
     ul{
       transform:translateX(${ulTranslate});

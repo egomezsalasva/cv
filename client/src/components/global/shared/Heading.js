@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 //STYLE
 //-Variables
-
+const fontSizeH4 = 14
 //-Components
 const HeadingContainer = styled.div`
     overflow: hidden;
@@ -16,7 +16,7 @@ const HeadingContainer = styled.div`
         color: white;
         padding: 0 15px 0 10px;
         font-family: 'SpaceMono-Regular';
-        font-size: 14px;
+        font-size: ${fontSizeH4}px;
         line-height: 21px;
         text-align: center;
         font-weight: 300;
@@ -26,10 +26,10 @@ const HeadingContainer = styled.div`
 
 
 //MAIN COMPONENT
-const Heading = ({ headingName, headingRefProp, classProp }) => {
+const Heading = ({ headingName, classProp }) => {
     return (          
         <HeadingContainer>
-            <h4 ref={headingRefProp} className={classProp}>{headingName}</h4>   
+            <h4 className={classProp}>{headingName}</h4>   
         </HeadingContainer>   
     )
 }
