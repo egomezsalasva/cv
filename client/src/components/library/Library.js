@@ -18,7 +18,7 @@ const SectionsOuter = styled.div`
   margin-top: 30px;
   overflow: scroll;
   .section{
-    max-width: 500px;
+    max-width: 650px;
     margin: 0 ${responsiveWidthHeights.w30px} 50px;
     @media ${devices.tablet} {
       margin: 0 auto 50px;
@@ -242,6 +242,22 @@ const Library = () => {
                 <span className="bookTitle">Getting to Yes</span>
                 <span className="bookSubtitle">, Negotiating agreement without giving in, </span>
                 <span className="bookAuthor">Roger Fisher</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="section">
+            <Heading headingName="Biographies" classProp="heading" />
+            <ul>
+              <li>
+                <span className="bookTitle">Creative Capital</span>
+                <span className="bookSubtitle">, Georges Doriot and the Birth of Venture Capital, </span>
+                <span className="bookAuthor">Spencer E. Ante</span>
+              </li>
+              <li>
+                <span className="bookTitle">Elon Musk</span>
+                <span className="bookSubtitle">, Tesla, SpaceX, and the Quest for a Fantastic Future, </span>
+                <span className="bookAuthor">Ashlee Vance</span>
               </li>
             </ul>
           </div>
