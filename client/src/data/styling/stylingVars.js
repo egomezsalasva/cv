@@ -20,7 +20,7 @@ const colors = {
 //FONTS
 const fonts = {
   //Font
-  displayFnt: '',
+  displayFnt: 'SpaceMono-Regular',
   fntSemiBold: 'Graphik-Semibold',
   fntRegular: 'Graphik-Regular',
   //Sizes
