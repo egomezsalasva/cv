@@ -2,7 +2,7 @@
 //-Modules
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { gsap } from 'gsap'
+// import { gsap } from 'gsap'
 //-Components
 import Heading from '../global/shared/Heading'
 //-Variables

@@ -2,6 +2,7 @@
 //-Modules
 import React from 'react'
 import styled from 'styled-components'
+import { responsiveWidthHeights, devices } from '../../data/styling/stylingVars'
 
 
 //STYLE
@@ -10,7 +11,10 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
-  margin: 0 30px;
+  margin: 0 ${responsiveWidthHeights.w30px};
+  @media ${devices.tablet} {
+    margin: 0 ${responsiveWidthHeights.w10px};
+  }
 `
 const Title = styled.h2`
   font-family: 'Graphik-Semibold';

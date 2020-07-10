@@ -32,7 +32,8 @@ const fonts = {
 
 //WIDTHS & HEIGHTS
 const responsiveWidthHeights = {
-  w30px: "8vw"
+  w10px: "2.66666667vw",
+  w30px: "8vw",
 }
 
 

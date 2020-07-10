@@ -3,6 +3,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
+import { colors, fonts } from '../../data/styling/stylingVars'
 
 
 //STYLE
@@ -11,6 +12,7 @@ const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  max-width: 600px;
   margin: 30px auto;
   padding: 0 70px;
   .activeNav{
@@ -18,9 +20,9 @@ const NavContainer = styled.div`
   }
 `
 const NavOption = styled(NavLink)`
-  font-family: 'SpaceMono-Regular';
-  font-size: 14px;
-  color: #000;
+  font-family: ${fonts.displayFnt};
+  font-size: ${fonts.fntSz14};
+  color: ${colors.front};
   text-align: center;
   text-transform: lowercase;
   text-decoration: none;
