@@ -1,7 +1,9 @@
 //IMPORTS
 //-Modules
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import gsap from 'gsap'
+//-Styling
 import { responsiveWidthHeights, devices } from '../../data/styling/stylingVars'
 
 
@@ -39,14 +41,27 @@ const ThemeBox = styled.div`
   }
 `
 
-
 //MAIN COMPONENT
 function Header() {
+
+  const [ themeColorToggle , setThemeColorToggle ] = useState(false)
+  const toggleCubeAnim = gsap.timeline()
+
+
+  const themeColorToggleHandler = () => {
+    if(themeColorToggle === false){
+      toggleCubeAnim.to(".cube", 0.4, { x: 12 })
+    } else {
+      toggleCubeAnim.to(".cube", 0.4, { x: 0 })
+    }
+    setThemeColorToggle(!themeColorToggle)
+  }
+
   return (
     <HeaderContainer>
       <Title>J. Enrique Gomez-Salas</Title>
       <div>
-        <ThemeBox>
+        <ThemeBox onClick={themeColorToggleHandler}>
           <div className="cube"/>
         </ThemeBox>
       </div>

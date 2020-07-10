@@ -28,7 +28,7 @@ const fonts = {
   fntSz12: "12px",
   fntSz14: "14px",
   //Line Height
-  lnHt20: "20px"
+  lnHt20: "20px",
 }
 
 //WIDTHS & HEIGHTS
