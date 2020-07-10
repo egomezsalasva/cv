@@ -23,6 +23,7 @@ const fonts = {
   displayFnt: 'SpaceMono-Regular',
   fntSemiBold: 'Graphik-Semibold',
   fntRegular: 'Graphik-Regular',
+  fntItalic: 'Graphik-RegularItalic',
   //Sizes
   fntSz12: "12px",
   fntSz14: "14px",
@@ -34,6 +35,9 @@ const fonts = {
 const responsiveWidthHeights = {
   w10px: "2.66666667vw",
   w30px: "8vw",
+
+  h200px: "29.9850075vh",
+  h400px: "59.970015vh",
 }
 
 

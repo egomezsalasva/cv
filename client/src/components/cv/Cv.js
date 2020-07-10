@@ -5,8 +5,8 @@ import styled from 'styled-components'
 // import { gsap } from 'gsap'
 //-Components
 import Heading from '../global/shared/Heading'
-//-Variables
-import { devices, colors, fonts, responsiveWidthHeights } from "../../data/styling/stylingVars"
+//-Styling
+import { devices, colors, fonts, responsiveWidthHeights } from '../../data/styling/stylingVars'
 
 
 //STYLE

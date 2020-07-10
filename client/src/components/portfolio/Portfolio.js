@@ -7,6 +7,8 @@ import Heading from '../global/shared/Heading'
 //-Images
 import scrannysHouseImg from '../../images/scrannysHouse.png'
 import apollo30Img from '../../images/apollo30.png'
+//-Styling
+import { devices, responsiveWidthHeights } from '../../data/styling/stylingVars'
 
 //DATA
 const portfolioData = [
@@ -31,12 +33,18 @@ const SectionsOuter = styled.div`
   margin-top: 30px;
   overflow: scroll;
   .section{
-    margin: 0 30px 50px;
     max-width: 650px;
+    margin: 0 ${responsiveWidthHeights.w30px} 50px;
+    @media ${devices.tablet} {
+      margin: 0 auto 50px;
+    }
     .portfolioImg{
       width: 100%;
-      height: 29.9850075vh;
+      height: ${responsiveWidthHeights.h200px};
       background-repeat: no-repeat;
+      @media ${devices.tablet} {
+        height: ${responsiveWidthHeights.h400px};
+      }
 
     }
   }

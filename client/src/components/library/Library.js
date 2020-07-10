@@ -4,12 +4,13 @@ import React from 'react'
 import styled from 'styled-components'
 //-Components
 import Heading from '../global/shared/Heading'
+//-Styling
+import { devices, fonts, responsiveWidthHeights } from '../../data/styling/stylingVars'
 
 
 //STYLE
 //-Variables
 const ulTranslate = "15px"
-const w30px = "8vw"
 //-Components
 const SectionsOuter = styled.div`
   width: 100%;
@@ -17,14 +18,18 @@ const SectionsOuter = styled.div`
   margin-top: 30px;
   overflow: scroll;
   .section{
-    margin: 0 ${w30px} 50px;
-    max-width: 650px;
+    max-width: 500px;
+    margin: 0 ${responsiveWidthHeights.w30px} 50px;
+    @media ${devices.tablet} {
+      margin: 0 auto 50px;
+    }
+
     ul{
       transform:translateX(${ulTranslate});
       width: calc(100% - ${ulTranslate});
       li{
-        font-size: 14px;
-        margin-bottom: 14px;
+        font-size: ${fonts.fntSz14};
+        margin-bottom: ${fonts.fntSz14};
         .bookTitle{
           font-weight: 700;
         }
@@ -32,7 +37,7 @@ const SectionsOuter = styled.div`
           font-weight: 300;
         }
         .bookAuthor{
-          font-family: 'Graphik-RegularItalic';
+          font-family: ${fonts.fntItalic};
           font-weight: 300;
         }
       }
